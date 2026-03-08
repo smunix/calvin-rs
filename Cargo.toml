@@ -1,0 +1,32 @@
+[package]
+name = "calvin-rs"
+version = "0.1.0"
+edition = "2021"
+description = "A language, compiler, and runtime for efficient dynamic expression evaluation, data storage and analysis — a Rust reimplementation of hobbes"
+license = "Apache-2.0"
+readme = "README.md"
+
+[dependencies]
+thiserror = "1"
+itertools = "0.12"
+chumsky = "0.9"
+ariadne = "0.4"
+rustyline = "14"
+memmap2 = "0.9"
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+tokio = { version = "1", features = ["full"] }
+byteorder = "1"
+uuid = { version = "1", features = ["v4"] }
+chrono = "0.4"
+clap = { version = "4", features = ["derive"] }
+tracing = "0.1"
+tracing-subscriber = "0.3"
+
+[[bin]]
+name = "hi"
+path = "src/bin/hi.rs"
+
+[[bin]]
+name = "hog"
+path = "src/bin/hog.rs"
